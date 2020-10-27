@@ -11,7 +11,7 @@ export const Demo = () => {
 	return (
 		<div className="container">
 			<ul className="list-group">
-				{/* {store.demo.map((item, index) => {
+				{store.demo.map((item, index) => {
 					return (
 						<li
 							key={index}
@@ -38,7 +38,7 @@ export const Demo = () => {
 							</button>
 						</li>
 					);
-				})} */}
+				})}
 			</ul>
 			<br />
 			<Link to="/">
