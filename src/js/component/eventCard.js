@@ -8,16 +8,31 @@ import { Link } from "react-router-dom";
 export const EventCard = props => {
 	const { store, actions } = useContext(Context);
 	let date = new Date(props.event.meta_keys.day);
-	console.log(date);
 	return (
 		<div className="card my-4">
-			<div className="card-header">{date.toDateString()}</div>
+			<h2 className="card-header">
+				{store.months[date.getMonth()]} {date.getDate()}
+			</h2>
 			<div className="card-body">
 				<div className="row">
-					<div className="col-4">{props.event.meta_keys.time}</div>
+					<h3 className="col-4">{actions.toAMPM(props.event.meta_keys.time)}</h3>
 					<div className="col-8">
-						<div>{props.event.post_title}</div>
-						<div>{actions.getGroupName(props.event.meta_keys._groupId)}</div>
+						<Link
+							className="d-block h4"
+							to={{
+								pathname: "/event/" + props.event.ID,
+								event: props.event
+							}}>
+							{props.event.post_title}
+						</Link>
+						<Link
+							className="d-block"
+							to={{
+								pathname: "/group/" + props.event.meta_keys._groupId,
+								group: actions.getGroup(props.event.meta_keys._groupId)
+							}}>
+							{actions.getGroup(props.event.meta_keys._groupId).post_title}
+						</Link>
 					</div>
 				</div>
 			</div>

@@ -1,6 +1,20 @@
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
+			months: [
+				"January",
+				"February",
+				"March",
+				"April",
+				"May",
+				"June",
+				"July",
+				"August",
+				"September",
+				"October",
+				"November",
+				"December"
+			],
 			events: [
 				{
 					ID: 36,
@@ -71,7 +85,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 			getEvents: () => {
 				return getStore().events;
 			},
-			getGroupName: id => {
+			getGroup: id => {
 				const groups = getStore().Groups;
 				id = parseInt(id);
 				let group = {};
@@ -82,7 +96,27 @@ const getState = ({ getStore, getActions, setStore }) => {
 					}
 				});
 
-				return group.post_title;
+				return group;
+			},
+			getEvent: id => {
+				const groups = getStore().events;
+				id = parseInt(id);
+				let event = {};
+
+				groups.forEach(element => {
+					if (id === element.ID) {
+						event = element;
+					}
+				});
+
+				return event;
+			},
+			toAMPM: timeString => {
+				const timeString12hr = new Date("1970-01-01T" + timeString + "Z");
+				return timeString12hr.toLocaleTimeString(
+					{},
+					{ timeZone: "UTC", hour12: true, hour: "numeric", minute: "numeric" }
+				);
 			}
 		}
 	};

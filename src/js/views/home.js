@@ -15,7 +15,6 @@ export const Home = () => {
 	else {
 		content = store.events.map((event, index) => <EventCard key={index} event={event} />);
 	}
-	console.log(content);
 	return (
 		<div>
 			<div className="bg-dark text-white text-center pb-1">
