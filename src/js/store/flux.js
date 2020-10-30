@@ -54,6 +54,19 @@ const getState = ({ getStore, getActions, setStore }) => {
 						_rsvpNo: ["cheeselover", "neweradude", "james1996"],
 						_rsvpYes: ["robert", "jjtime", "username2"]
 					}
+				},
+				{
+					ID: 39,
+					post_content:
+						"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec libero consectetur risus vehicula interdum eu at elit. Proin a commodo erat, eu molestie ipsum. Aliquam tristique nunc a est tristique, et convallis risus ullamcorper. Fusce nec massa ac enim pellentesque ornare. Pellentesque non sapien varius, pellentesque tellus sit amet, facilisis justo. Duis rhoncus nunc id elementum dapibus. Sed dictum lacinia vestibulum.",
+					post_title: "Amet Event",
+					meta_keys: {
+						day: "2018,05,03",
+						time: "12:00:00",
+						_groupId: 10,
+						_rsvpNo: ["cheeselover", "james1996"],
+						_rsvpYes: ["robert", "neweradude", "jjtime", "username2"]
+					}
 				}
 			],
 			Groups: [

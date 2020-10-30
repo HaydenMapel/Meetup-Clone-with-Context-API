@@ -27,13 +27,15 @@ export const Group = () => {
 				</div>
 			</div>
 			<div className="container">
-				<p className="m-2">Next Events</p>
+				<h3 className="m-2 text-center">Next Events</h3>
 				<div>{content}</div>
-				<Link to="/">
-					<span className="btn btn-primary btn-lg" href="#" role="button">
-						Back home
-					</span>
-				</Link>
+				<div className="text-center justify-content-center">
+					<Link to="/">
+						<button className="btn btn-primary btn-lg" href="#" role="button">
+							Back home
+						</button>
+					</Link>
+				</div>
 			</div>
 		</div>
 	);

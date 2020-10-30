@@ -43,11 +43,13 @@ export const Event = () => {
 						</div>
 					</div>
 				</div>
-				<Link to="/">
-					<span className="btn btn-primary btn-lg" href="#" role="button">
-						Back home
-					</span>
-				</Link>
+				<div className="text-center justify-content-center">
+					<Link to="/">
+						<span className="btn btn-primary btn-lg" href="#" role="button">
+							Back home
+						</span>
+					</Link>
+				</div>
 			</div>
 		</div>
 	);
