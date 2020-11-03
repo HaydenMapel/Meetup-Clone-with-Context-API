@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 
 export const EventCard = props => {
 	const { store, actions } = useContext(Context);
-	let date = new Date(props.event.meta_keys.day);
+	let date = new Date(actions.formatDate(props.event.meta_keys.day));
 	return (
 		<div className="card my-4">
 			<h2 className="card-header">
@@ -28,10 +28,10 @@ export const EventCard = props => {
 						<Link
 							className="d-block"
 							to={{
-								pathname: "/group/" + props.event.meta_keys._groupId,
-								group: actions.getGroup(props.event.meta_keys._groupId)
+								pathname: "/group/" + props.event.meta_keys._group,
+								group: actions.getGroup(props.event.meta_keys._group)
 							}}>
-							{actions.getGroup(props.event.meta_keys._groupId).post_title}
+							{actions.getGroup(props.event.meta_keys._group).post_title}
 						</Link>
 					</div>
 				</div>

@@ -10,7 +10,7 @@ export const Group = () => {
 	let group = actions.getGroup(params.ID);
 
 	let groupEvents = store.events.filter(event => {
-		return event.meta_keys._groupId == group.ID;
+		return event.meta_keys._group == group.ID;
 	});
 	let content = groupEvents.map((event, index) => <EventCard key={index} event={event} />);
 
@@ -40,15 +40,3 @@ export const Group = () => {
 		</div>
 	);
 };
-
-{
-	/* <h1 className="display-4">This will show the Group name: {actions.getGroup(params.ID).post_title}</h1>
-
-			<hr className="my-4" />
-
-			<Link to="/">
-				<span className="btn btn-primary btn-lg" href="#" role="button">
-					Back home
-				</span>
-			</Link> */
-}

@@ -7,7 +7,7 @@ export const Event = () => {
 	const { store, actions } = useContext(Context);
 	let params = useParams();
 	let event = actions.getEvent(params.ID);
-	let date = new Date(event.meta_keys.day);
+	let date = new Date(actions.formatDate(event.meta_keys.day));
 	return (
 		<div>
 			<div className="bg-dark text-white px-4 pb-1">
@@ -18,8 +18,8 @@ export const Event = () => {
 				<Link
 					className="h5 d-block"
 					to={{
-						pathname: "/group/" + event.meta_keys._groupId,
-						group: actions.getGroup(event.meta_keys._groupId)
+						pathname: "/group/" + event.meta_keys._group,
+						group: actions.getGroup(event.meta_keys._group)
 					}}>
 					{actions.getGroup(event.meta_keys._groupId).post_title}
 				</Link>
