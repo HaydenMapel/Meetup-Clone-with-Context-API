@@ -16,19 +16,19 @@ const getState = ({ getStore, getActions, setStore }) => {
 				"December"
 			],
 			events: [
-				{
-					ID: 36,
-					post_content:
-						"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec libero consectetur risus vehicula interdum eu at elit. Proin a commodo erat, eu molestie ipsum. Aliquam tristique nunc a est tristique, et convallis risus ullamcorper. Fusce nec massa ac enim pellentesque ornare. Pellentesque non sapien varius, pellentesque tellus sit amet, facilisis justo. Duis rhoncus nunc id elementum dapibus. Sed dictum lacinia vestibulum.",
-					post_title: "Lorem Event",
-					meta_keys: {
-						day: "2018,04,28",
-						time: "07:00:00",
-						_groupId: 9,
-						_rsvpNo: ["robert", "jjtime", "username2"],
-						_rsvpYes: ["cheeselover", "neweradude", "james1996"]
-					}
-				}
+				// {
+				// 	ID: 36,
+				// 	post_content:
+				// 		"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec libero consectetur risus vehicula interdum eu at elit. Proin a commodo erat, eu molestie ipsum. Aliquam tristique nunc a est tristique, et convallis risus ullamcorper. Fusce nec massa ac enim pellentesque ornare. Pellentesque non sapien varius, pellentesque tellus sit amet, facilisis justo. Duis rhoncus nunc id elementum dapibus. Sed dictum lacinia vestibulum.",
+				// 	post_title: "Lorem Event",
+				// 	meta_keys: {
+				// 		day: "2018,04,28",
+				// 		time: "07:00:00",
+				// 		_groupId: 9,
+				// 		_rsvpNo: ["robert", "jjtime", "username2"],
+				// 		_rsvpYes: ["cheeselover", "neweradude", "james1996"]
+				// 	}
+				// }
 				// {
 				// 	ID: 37,
 				// 	post_content:
