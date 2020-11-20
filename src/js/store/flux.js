@@ -137,7 +137,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					.then(result => {
 						result.map(group => getStore().Groups.push(group));
 						let finalgroups = getStore().Groups;
-						setStore({ Groups: finalGroups });
+						setStore({ Groups: finalgroups });
 					})
 					.catch(error => console.error("Error:", error));
 			},
